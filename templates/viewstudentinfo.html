@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class=viewstudentinfo>
+	<h2>View student Info</h2>
+	<div class=infostudent>
+		<form method="POST">
+			{% csrf_token %}
+			<h4>{{ error }}</h4>
+			<input type=text name="student_id" placeholder="Student ID" required>
+			<input type=submit value="Submit">
+		</form>
+	</div>
+
+	<div class=detailstudent>
+		{% for info in info %}
+			<p> <img src="{% static "images/student.png" %}">
+			<p> <strong>Student ID  :</strong> {{ info.student_id }} </p>
+			<p> <strong>First Name  :</strong> {{ info.firstname }} </p>
+			<p> <strong>Middle Name :</strong> {{ info.middlename }}</p>
+			<p> <strong>Last Name   :</strong> {{ info.lastname }} </p>
+			<p> <strong>Class       :</strong> {{ info.grade }}</p>
+			<p> <strong>Age         :</strong> {{ info.age }} </p>
+			<p> <strong>Father Name :</strong> {{ info.fathername }} </p>
+			<p> <strong>Phone       :</strong> {{ info.phone }} </p>
+			<p> <strong>Address     :</strong> {{ info.address }} </p>
+		{% endfor %}
+	</div>
+
+</div>
+
+
+{% endblock %}

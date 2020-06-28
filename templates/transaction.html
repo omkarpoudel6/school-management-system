@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="transactionbody">
+    <h2>View Tranasaction</h2>
+    <div class="transaction">
+        <form method="POST">
+            {% csrf_token %}
+            <h4>{{ information }}</h4>
+            <input type="text" name="student_id" placeholder="Student ID" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="transactiontable">
+        <div class="studentinfo">
+            <strong>First Name  : </strong>{{studentinfo.firstname}}<br>
+            <strong>Middle Name : </strong>{{studentinfo.middlename}}<br>
+            <strong>Last Name   : </strong>{{studentinfo.lastname}}<br>
+            <strong>Class       : </strong>{{studentinfo.grade}}<br>
+        </div>
+
+        <table border="1px solid black">
+            <thead>
+                <td>Student ID</td>
+                <td>Date Of Transaction</td>
+                <td>Amount</td>
+                <td>Remarks</td>
+            </thead>
+            {% for tran in transaction %}
+            <tr>
+                <td>{{tran.sid}}</td>
+                <td>{{tran.date}}</td>
+                <td>{{tran.amount}}</td>
+                <td>{{tran.remarks}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}

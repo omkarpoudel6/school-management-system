@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="addstudent">
+	<h2>Add New Student</h2>
+	<div class=addform>
+		<h4>{{ information }}</h4>
+		<h4>{{ student_id }}</h4>
+		<form method="post">
+			{% csrf_token %}
+			<input type=text name="firstname" id="firstname" placeholder="First Name" required>
+			<input type=text name="middlename" id="middlename" placeholder="Middle Name">
+			<input type=text name="lastname" id="lastname" placeholder="Last Name" required>
+			<input type=text name="age" id="age" placeholder="Age" required>
+			<input type=text name="grade" id="grade" placeholder="Grade" required>
+			<input type=text name="fathername" id="fathername" placeholder="Father Name" required>
+			<input type=text name="phone" id="phone" Placeholder="Phone" required>
+			<input type=text name="address" id="address" Placeholder="Address" required>
+			<input type=submit value="Submit">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

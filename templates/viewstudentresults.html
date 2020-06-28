@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class=viewstudentresult>
+	<h2>View Result</h2>
+	<div class="viewresult">
+		<form method="POST">
+			{% csrf_token %}
+			<h4> {{ information }} </h4>
+			<input type=text name="student_id" placeholder="Student ID" required>
+			<input type="text" name="term" placeholder="Term" required>
+			<input type=submit value="Submit">
+		</form>
+	</div>
+	<div class="resulttable">
+		<div class="studentinfo">
+			<strong>First Name :</strong> {{ studentinfo.firstname }}<br>
+			<strong>Middle Name :</strong> {{ studentinfo.middlename }}<br>
+			<strong>Last Name : </strong>{{ studentinfo.lastname }}<br>
+			<strong>Class :</strong> {{ studentinfo.grade}} <br>
+		</div>
+		<table border="1px solid black">
+			<thead>
+				<td><strong>Subject</strong></td>
+				<td><strong>Full Marks</strong></td>
+				<td><strong>Pass Marks</strong></td>
+				<td><strong>Marks Obtained</strong></td>
+			</thead>
+			<tr>
+				<td>English</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.english }} </td>
+			</tr>
+			<tr>
+				<td>Nepali</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.nepali }}</td>
+			</tr>
+			<tr>
+				<td>Math</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.math }} </td>
+			</tr>
+			<tr>
+				<td>Science</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.science }} </td>
+			</tr>
+			<tr>
+				<td>Social</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.social }} </td>
+			</tr>
+			<tr>
+				<td>EHP</td>
+				<td>(100/50)</td>
+				<td>(40/20)</td>
+				<td> {{ result.ehp }} </td>
+			</tr>
+			<tr>
+				<td>Optional I</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.optionali }} </td>
+			</tr>
+			<tr>
+				<td>Optional II</td>
+				<td>100</td>
+				<td>40</td>
+				<td> {{ result.optionalii }} </td>
+			</tr>
+			<tr>
+				<td>Grammar</td>
+				<td>50</td>
+				<td>20</td>
+				<td> {{ result.grammar }} </td>
+			</tr>
+			<tr>
+				<td>Optional Math</td>
+				<td>50</td>
+				<td>20</td>
+				<td> {{ result.optionalmath }} </td>
+			</tr>
+			<tr>
+				<td>Computer</td>
+				<td>50</td>
+				<td>20</td>
+				<td> {{ result.computer }} </td>
+			</tr>
+			<tr>
+				<td>GK</td>
+				<td>50</td>
+				<td>20</td>
+				<td> {{ result.gk }} </td>
+			</tr>
+			<tr>
+				<td>Drawing</td>
+				<td>50</td>
+				<td>20</td>
+				<td> {{ result.drawing }} </td>
+			</tr>
+			<tr>
+				<td><strong>Total</strong></td>
+				<td><strong> {{ result.totalfullmark }} </strong></td>
+				<td><strong> {{ result.totalpassmark }} </strong></td>
+				<td><strong> {{ result.marksobtained }} </strong></td>
+			</tr>
+			<tr>
+				<td><strong>Percentage</strong></td>
+				<td></td>
+				<td></td>
+				<td><strong> {{ result.percentage }} </strong></td>
+			</tr>
+			<tr>
+				<td><strong>Division</strong></td>
+				<td></td>
+				<td></td>
+				<td><strong> {{ result.division }} </strong></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+{% endblock %}

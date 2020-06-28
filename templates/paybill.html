@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class=paybill>
+	<h2> Billing Status </h2>
+	<div class=billpay>
+		<h4>{{ information }}</h4>
+		<form method="POST">
+			{% csrf_token %}
+			<input type=text name="student_id" placeholder="Student ID" required>
+			<input type=submit value="Submit">
+		</form>
+	</div>
+
+	<div class=billinfo>
+		<div class=studentinfo>
+			<strong>First Name  :</strong> {{studentinfo.firstname}} <br>
+			<strong>Middle Name :</strong> {{studentinfo.middlename}} <br>
+			<strong>Last Name   :</strong> {{studentinfo.lastname}} <br>
+			<strong>Class       :</strong> {{studentinfo.class}} <br>
+			<strong>Admission   :</strong> {{billinfo.admission}}
+		</div>
+		<table border=2px solid black>
+			<thead>
+				<td><strong>Month</strong></td>
+				<td><strong>Fee</strong></td>
+			</thead>
+			<tr>
+				<td>Baisakh</td>
+				<td>{{billinfo.baisakh}}</td>
+			</tr>
+			<tr>
+				<td>Jestha</td>
+				<td>{{billinfo.jestha}}</td>
+			</tr>
+			<tr>
+				<td>Ashad</td>
+				<td>{{billinfo.ashad}}</td>
+			</tr>
+			<tr>
+				<td>Shrawan</td>
+				<td>{{billinfo.shrawan}}</td>
+			</tr>
+			<tr>
+				<td>Bhadra</td>
+				<td>{{billinfo.bhadra}}</td>
+			</tr>
+			<tr>
+				<td>Aswin</td>
+				<td>{{billinfo.aswin}}</td>
+			</tr>
+			<tr>
+				<td>Kartik</td>
+				<td>{{billinfo.kartik}}</td>
+			</tr>
+			<tr>
+				<td>Mangsir</td>
+				<td>{{billinfo.mangsir}}</td>
+			</tr>
+			<tr>
+				<td>Poush</td>
+				<td>{{billinfo.poush}}</td>
+			</tr>
+			<tr>
+				<td>Magh</td>
+				<td>{{billinfo.magh}}</td>
+			</tr>
+			<tr>
+				<td>Falgun</td>
+				<td>{{billinfo.falgun}}</td>
+			</tr>
+			<tr>
+				<td>Chaitra</td>
+				<td>{{billinfo.chaitra}}</td>
+			</tr>
+
+		</table>
+	</div>
+
+
+<!--	<h3>Select Month to pay the bill</h3>-->
+
+<!--	<div class=payment>-->
+<!--		<form method="POST">-->
+<!--			{% csrf_token %}-->
+<!--			<input type="radio" id="Baisakh" name="month" value="Baisakh">-->
+<!--			<label for="Baisakh">Baisakh</label><br>-->
+
+<!--			<input type="radio" id="Jestha" name="month" value="Jestha">-->
+<!--			<label for="Jestha">Jestha</label><br>-->
+
+<!--			<input type="radio" id="Ashad" name="month" value="Ashad">-->
+<!--			<label for="Ashad">Ashad</label><br>-->
+
+<!--			<input type="radio" id="Shrawan" name="month" value="Shrawan">-->
+<!--			<label for="Shrawan">Shrawan</label><br>-->
+
+<!--			<input type="radio" id="Bhadra" name="month" value="Bhadra">-->
+<!--			<label for="Bhadra">Bhadra</label><br>-->
+
+<!--			<input type="radio" id="Aswin" name="month" value="Aswin">-->
+<!--			<label for="Aswin">Aswin</label><br>-->
+
+<!--			<input type="radio" id="Kartik" name="month" value="Kartik">-->
+<!--			<label for="Kartik">Kartik</label><br>-->
+
+<!--			<input type="radio" id="Mangsir" name="month" value="Mangsir">-->
+<!--			<label for="Mangsir">Mangsir</label><br>-->
+
+<!--			<input type="radio" id="Poush" name="month" value="Poush">-->
+<!--			<label for="Poush">Poush</label><br>-->
+
+<!--			<input type="radio" id="Magh" name="month" value="Magh">-->
+<!--			<label for="Magh">Magh</label><br>-->
+
+<!--			<input type="radio" id="Falgun" name="month" value="Falgun">-->
+<!--			<label for="Falgun">Falgun</label><br>-->
+
+<!--			<input type="radio" id="Chaitra" name="month" value="Chaitra">-->
+<!--			<label for="Chaitra">Chaitra</label><br>-->
+
+<!--			<input type="submit" value="Pay">-->
+<!--			-->
+<!--		</form>-->
+<!--	</div>-->
+</div>
+
+{% endblock %}

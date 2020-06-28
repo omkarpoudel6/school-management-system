@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="billpaymentbody">
+   <h2>Bill Payment</h2>
+    <div class="billpayment">
+        <h4>{{ information }}</h4>
+	<form method="POST">
+        {% csrf_token %}
+		<input type="text" name="student_id" placeholder="Student ID" required>
+        <input type="text" name="grade" placeholder="Class" required>
+<!--        <input type="text" name="month" placeholder="Month" required>-->
+		<select name="month" required>
+			<option value="baisakh">Baisakh</option>
+			<option value="jestha">Jestha</option>
+			<option value="ashad">Ashad</option>
+			<option value="shrawan">Shrawan</option>
+			<option value="bhadra">Bhadra</option>
+			<option value="aswin">Aswin</option>
+			<option value="kartik">Kartik</option>
+			<option value="mangsir">Mangsir</option>
+			<option value="poush">Poush</option>
+			<option value="magh">Magh</option>
+			<option value="falgun">Falgun</option>
+			<option value="chaitra">Chaitra</option>
+		</select>
+        <input type="text" name="amount" placeholder="Amount" required>
+        <input type="text" name="remarks" placeholder="Remarks" required>
+        <input type="submit" value="Submit">
+	</form>
+    </div>
+</div>
+
+{% endblock %}

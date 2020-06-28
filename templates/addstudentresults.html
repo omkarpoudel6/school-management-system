@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="addstudentresult">
+	<h2>Add Result</h2>
+	<div class="addresult">
+		<form method="POST">
+			{% csrf_token %}
+			<h4>{{ information }}</h4>
+			<label>Student Id</label>
+			<input type=text name="student_id" placeholder="Student ID" required>
+			<label>Term</label>
+			<input type=text name="term" placeholder="Term" required>
+			<label>Grade</label>
+			<input type=text name="grade" placeholder="Grade" required>
+			<label>English</label>
+			<input type=text name="english" placeholder="English" required>
+			<label>Nepali</label>
+			<input type=text name="nepali" placeholder="Nepali" required>
+			<label>Math</label>
+			<input type=text name="math" placeholder="Math" required>
+			<label>Science</label>
+			<input type=text name="science" placeholder="Science" required>
+			<label>Social</label>
+			<input type=text name="social" placeholder="Social" required>
+			<label>EHP</label>
+			<input type=text name="ehp" placeholder="EHP">
+			<label>Optional I</label>
+			<input type=text name="optionali" placeholder="Optional I">
+			<label>Optional II</label>
+			<input type=text name="optionalii" placeholder="Optional II">
+			<label>Grammar</label>
+			<input type=text name="grammar" placeholder="Grammar">
+			<label>Optional Math</label>
+			<input type=text name="optionalmath" placeholder="Optional Math">
+			<label>Computer</label>
+			<input type=text name="computer" placeholder="Computer">
+			<label>GK</label>
+			<input type=text name="gk" placeholder="GK">
+			<label>Drawing</label>
+			<input type=text name="drawing" placeholder="Drawing">
+			<input type=submit value="Add Result">
+		</form>
+
+	</div>
+</div>
+
+{% endblock %}

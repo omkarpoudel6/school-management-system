@@ -1,0 +1,265 @@
+body{
+	background-color:teal;
+}
+.header{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	border: 4px solid white;
+	border-radius: 100px;
+}
+
+.headermain{
+    width:100%;
+    border-top:2px solid black;
+}
+
+.home{
+	height: 100%;
+	width: 80%;
+	border: 2px solid black;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fotter{
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	border: 2px solid white;
+	border-radius: 100px;
+}
+
+.contact{
+	height: 100%;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.resulttable,.detailstudent,.billinfo,{
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 60%;
+}
+
+.transactiontable{
+    border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
+}
+
+.studentinfo{
+	margin-top: 10px;
+	margin-bottom: 18px;
+	float: left;
+	text-align: left;
+	color: gold;
+}
+
+.payment{
+	height: 100%;
+	width: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	margin-top: 20px;
+}
+
+.addstudent,.addstudentresult,.viewstudentresult,.viewstudentinfo,.infostudent,.paybill,.transactionbody,.billpaymentbody{
+	height: 100%;
+	width: 80%;
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.addform,.addresult,.viewresult,.infostudent,.billpay,.transaction,.billpayment{
+	border:1px solid black;
+	height: 100%;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.addform input[type="text"],.billpayment input[type="text"],.transaction input[type="text"],.addresult input[type="text"],.viewresult input[type="text"],.infostudent input[type="text"],.billpay input[type="text"]{
+	font-size: 17px;
+	display:block;
+	background:transparent;
+	border:0;
+	border-bottom:1px solid #fff;
+	line-height: 37px;
+	width:100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.billpayment select{
+    font-size: 17px;
+	display:block;
+	background:transparent;
+	border:0;
+	border-bottom:1px solid #fff;
+	line-height: 37px;
+	width:100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.addform input[type="submit"],.billpayment input[type="submit"],.transaction input[type="submit"],.addresult input[type="submit"],.viewresult input[type="submit"],.infostudent input[type="submit"],.billpay input[type="submit"],.paybill button,.payment input[type="submit"]{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+	text-align: center;
+	background-color: gold;
+	border-radius: 100px;
+	height: 35px;
+	font-size: 20px;
+}
+
+.addform input[type="submit"]:hover,.transaction input[type="submit"]:hover,.addresult input[type="submit"]:hover,.viewresult input[type="submit"]:hover,.infostudent input[type="submit"]:hover,.billpay input[type="submit"]:hover,.paybill button,.payment input[type="submit"]{
+	cursor: pointer;
+	color:red;
+}
+
+.addresult label{
+    font-size:20px;
+}
+
+.addresult h4,.viewresult h4,.paybill h4{
+    color:red;
+}
+
+.introduction,.voiceofprinciple,.voiceofviceprinciple{
+	height: 100%;
+	width: 90%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+.voiceoftoppers{
+	height:650px;
+	width:90%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+.introduction h2{
+	margin-left: 380px;
+	color: lightgoldenrodyellow;
+}
+
+.voiceofprinciple h2,.voiceofviceprinciple h2,.voiceoftoppers h2{
+	color: lightgoldenrodyellow;
+	margin-left: 330px;
+}
+.header h1{
+	color:red;
+}
+
+.voiceofprinciple img,.voiceofviceprinciple img,.detailstudent img{
+	height: 207px;
+	width: 190px;
+	margin-left: 375px;
+	margin-right: auto;
+}
+
+.firsttopper,.thirdtopper{
+	border:1px solid black;
+	float:left;
+	height: 170px;
+	width:600px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.secondtopper{
+	border:1px solid black;
+	float:right;
+	height: 170px;
+	width:600px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+
+
+.firsttopper img,.thirdtopper img{
+	height: 150px;
+	width: 190px;
+	float:left;
+	margin-top:6px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.secondtopper img{
+	height: 150px;
+	width: 190px;
+	float:right;
+	margin-top:6px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.transactiontable table thead{
+    font-size:25px;
+}
+
+.firsttopper p,.secondtopper p,.thirdtopper p{
+	margin-left:5px;
+	margin-right:10px;
+	margin-top:5px;
+	margin-bottom: 10px;
+}
+
+.detailstudent img{
+	height: 207px;
+	width: 190px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.resulttable table,.billinfo table,.transactiontable table{
+	width:100%;
+}
+
+ul li{
+	display:inline-block;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+ul a{
+	text-decoration: none;
+	color:black;
+}
+
+ul a:hover{
+	background:white;
+	color:green;
+}
